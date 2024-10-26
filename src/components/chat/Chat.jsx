@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./chat.css"
 import EmojiPicker from "emoji-picker-react"
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 const Chat = () => {
     const [openEmoji, setOpenEmoji] = useState(false)
     const [text, setText] = useState("")
-    console.log(text)
+
     const handleEmoji = (e) => {
         setText((prev) => prev + e.emoji)
         setOpenEmoji(false)
     }
+
+    const endRef = useRef(null)
+    useEffect(() => {
+        endRef.current?.scrollIntoView({ behavior: "smooth" })
+    }, [])
 
     return (
         <div className='chat'>
@@ -78,6 +84,7 @@ const Chat = () => {
                         <span>1 min ago</span>
                     </div>
                 </div>
+                <div ref={endRef}></div>
             </div>
 
             <div className="bottom">
@@ -107,7 +114,9 @@ const Chat = () => {
                         />
                     </div>
                 </div>
-                <button className='sendBtn'>
+                <button className='sendBtn' onClick={() => {
+                    toast.warn("AkbarALi")
+                }}>
                     <img src="./src/assets/images/send.png" alt="send" />
                 </button>
             </div>

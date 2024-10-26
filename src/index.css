@@ -21,4 +21,26 @@ body {
     background-color: #00000053;
     backdrop-filter: blur(8px) saturate(100%);
     display: flex;
+    overflow: hidden;
+}
+
+/* This styles the entire scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* This styles the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f6f4f442;
+}
+
+/* This styles the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 10px;
+}
+
+/* This styles the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
 }
