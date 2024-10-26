@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/images/chatbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000053;
+    backdrop-filter: blur(8px) saturate(100%);
+    display: flex;
+}
